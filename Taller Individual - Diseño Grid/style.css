@@ -1,21 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.tienda-layout{
+.tienda-layout {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "header header header header"
-    "sidebar main main main"
-    "footer footer footer footer";
+    grid-template-areas:
+        "header header header header"
+        "sidebar main main main"
+        "footer footer footer footer";
     gap: 10px;
 }
 
-header{
+header {
     grid-area: header;
     background-color: rgb(84, 84, 255);
     height: 50px;
@@ -24,16 +24,19 @@ header{
     color: white;
 }
 
-aside{
+aside {
     grid-area: sidebar;
     padding: 30px;
+    border-radius: 15px;
+    box-shadow: 3px 5px 15px rgb(66, 66, 66);
+
 }
 
-ul { 
+ul {
     list-style: none;
 }
 
-button{
+button {
     border: none;
     border-radius: 10px;
     padding: 5px 20px;
@@ -42,13 +45,13 @@ button{
     margin: 10px;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     background-color: rgb(255, 144, 85);
     color: black;
 }
 
-main{
+main {
     grid-area: main;
     height: 85vh;
     display: flex;
@@ -56,16 +59,16 @@ main{
     align-content: center;
 }
 
-img{
+img {
     border-radius: 15px;
     height: 40%;
 }
 
-.destacado img{
+.destacado img {
     height: 80%;
 }
 
-footer{
+footer {
     grid-area: footer;
     background-color: rgb(84, 84, 255);
     height: 50px;
@@ -74,25 +77,26 @@ footer{
     color: white;
 }
 
-.productos-grid{
-    display:grid ;
+.productos-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 300px;
-    gap:20px;
-    padding:20px;
+    gap: 20px;
+    padding: 20px;
     height: auto;
 }
 
 @keyframes producto-grid-animation {
-    0%{
+    0% {
         transform: scale(1);
     }
-    100%{
+
+    100% {
         transform: scale(1.05);
     }
 }
 
-.producto{
+.producto {
     width: 100%;
     border-radius: 15px;
     box-shadow: 3px 5px 15px rgb(66, 66, 66);
@@ -102,7 +106,7 @@ footer{
     flex-direction: column;
 }
 
-.producto:hover{
+.producto:hover {
     background-color: white;
     animation-name: producto-grid-animation;
     animation-duration: 0.5s;
@@ -110,18 +114,18 @@ footer{
     z-index: 10;
 }
 
-.producto h2{
+.producto h2 {
     font-size: 40px;
 }
 
-.precio{
+.precio {
     font-size: 35px;
 }
 
 
-.destacado{
-    grid-column:span 2;
-    grid-row:span 2;
+.destacado {
+    grid-column: span 2;
+    grid-row: span 2;
     border-radius: 15px;
     box-shadow: 3px 5px 15px rgb(66, 66, 66);
 }
@@ -130,49 +134,50 @@ footer{
 
 @media screen and (max-width: 992px) {
     .tienda-layout {
-      display: grid; 
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
-      grid-template-areas: 
-        "header header"
-        "sidebar main "
-        "footer footer";
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header"
+            "sidebar main "
+            "footer footer";
     }
 
-    .productos-grid{
+    .productos-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: auto;
         grid-auto-rows: auto;
     }
 
-    
-  }
-  
-  @media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 768px) {
     .tienda-layout {
-      display: grid; 
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      grid-template-areas: 
-        "header"
-        "sidebar"
-        "main"        
-        "footer";
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
     }
-       .productos-grid{
+
+    .productos-grid {
         display: grid;
         grid-template-columns: 1fr;
         height: auto;
         grid-auto-rows: auto;
     }
 
-    .destacado{
-        grid-column:span 1;
+    .destacado {
+        grid-column: span 1;
         grid-row: span 1;
     }
 
-.destacado img{
-    height: 40%;
+    .destacado img {
+        height: 40%;
+    }
 }
-  }
