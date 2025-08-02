@@ -8,15 +8,106 @@
 </head>
 <body>
     <div class="tienda-layout">
-        <header class="tienda-header">TIENDA LAYOUT</header>
-        <aside class="filtros">Filtros</aside>
+        <header class="tienda-header">TIENDA JX</header>
+        <aside class="filtros">
+            <h2>Categorías</h2>
+            <br>
+            <ul>
+            <li>
+                <label>
+                <input type="checkbox" name="categoria" value="sedan"> Sedán
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" name="categoria" value="pickup"> Pickup
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" name="categoria" value="van"> Van/Minivan
+                </label>
+            </li>
+            </ul>
+            <br>
+            <br>
+            <h2>Precios</h2>
+            <br>
+            <ul>
+            <li>
+                <label>
+                <input type="checkbox" name="precio" value="200-150"> $200M - $150M
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" name="precio" value="150-100"> $150M - $100M
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" name="precio" value="100-80"> $100M - $80M
+                </label>
+            </li>
+            <li>
+                <label>
+                <input type="checkbox" name="precio" value="menos-80"> Menor $80M
+                </label>
+            </li>
+            </ul>
+            <br>
+            <button>
+                Aplicar
+            </button>
+        </aside>
         <main class="productos-grid">
-            <div class="producto destacado">Producto Destacado</div>
-            <div class="producto">Producto 1</div>
-            <div class="producto">Producto 2</div>
-            <!-- más productos -->
+            <div class="producto destacado">
+                <h2>Vehículo de la semana</h2>
+                <img src="/img/toyota-prado.webp" alt="">
+                <h3>Toyota Prado 4.0 Tx-I</h3>
+                <p class="precio">$110'000.000</p>
+                <p>2011 | 415.440 km</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="/img/amarok-4x4.webp" alt="">
+                <h3>Volkswagen Amarok 2.0</h3>
+                <p class="precio">$109.800.000</p>
+                <p>2019 | 98.000 km</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="/img/mercedes-benz.webp" alt="">
+                <h3>Mercedes-Benz Clase GLC 2.0</h3>
+                <p class="precio">$198.400.000</p>
+                <p>2021 | 33.000 km</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="/img/amarok-4x4.webp" alt="">
+                <h3>Volkswagen Amarok 2.0</h3>
+                <p class="precio">$109.800.000</p>
+                <p>2019 | 98.000 km</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="/img/mercedes-benz.webp" alt="">
+                <h3>Mercedes-Benz Clase GLC 2.0</h3>
+                <p class="precio">$198.400.000</p>
+                <p>2021 | 33.000 km</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="/img/amarok-4x4.webp" alt="">
+                <h3>Volkswagen Amarok 2.0</h3>
+                <p class="precio">$109.800.000</p>
+                <p>2019 | 98.000 km</p>
+                <button>Comprar</button>
+            </div>
         </main>
-        <footer class="tienda-footer">Footer</footer>
+        <footer class="tienda-footer">
+            Realizado por David Ariaz
+        </footer>
     </div>
 </body>
 </html>
