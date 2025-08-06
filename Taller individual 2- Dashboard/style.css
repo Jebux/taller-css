@@ -21,23 +21,92 @@ header{
   grid-area: header;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: white;
   box-shadow: 0.5px 1px 5px rgba(78, 78, 78, 0.52);
   box-sizing: border-box;
   width: 100%;
   padding: 5px 25px;
+  z-index: 2;
+}
+
+.logo{
+  cursor:pointer;
+}
+
+.logo p{
+  font-size: 40px;
+  font-family: fantasy;
+}
+.noti-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.noti{
+  border-radius: 25px;
+  border:1px solid grey;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+input{
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgb(165, 165, 165);
+  width: 150px;
 }
 
 aside{
+  /*display: none;*/
   grid-area: nav;
   background-color: white;
   border-right: 1px solid rgba(138, 138, 138, 0.502);
+  z-index: 1;
+}
+
+.menu-lista{
+  display: none;
+}
+
+ul{
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  cursor:pointer;
+
+}
+
+ul li{
+  display: block;
+  padding: 3px;
+  margin: 10px 0;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+ul li:hover {
+  background-color: rgba(63, 63, 248, 0.829);
+  color: white;
 }
 
 main{
   grid-area: main;
   padding: 10px;
 }
+
 
 .stats-boxes{
   display: grid;
@@ -51,7 +120,16 @@ main{
   background-color: white;
   border-radius: 10px;
   box-shadow: 0.5px 1px 5px rgba(78, 78, 78, 0.22);
+  padding: 25px;
+  text-align: center;
 
+}
+.stats-emoji{
+  font-size: 50px;
+}
+
+.stats-main-p{
+  font-size: 25px;
 }
 
 .users-table{
@@ -61,8 +139,73 @@ main{
   border-radius: 10px;
   box-shadow: 0.5px 1px 5px rgba(78, 78, 78, 0.22);
   margin-top: 10px;
+
 }
 
+table{
+  width: 100%;
+  padding: none;
+}
+
+
+.table-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+}
+
+.table-header p{
+  font-size: 30px;
+}
+
+td{
+  text-align: center;
+  height: 40px;
+}
+
+.table-encabezados{
+  background-color: whitesmoke;
+  height: 40px;
+}
+
+.edits{
+  cursor: pointer;
+}
+
+button{
+  background-color: rgba(63, 63, 248, 0.829);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  padding: 0 20px;
+  cursor:pointer;
+}
+
+.rol-user{
+  background-color: rgba(255, 69, 69, 0.40);
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.rol-admin{
+  background-color: rgba(243, 255, 69, 0.40);
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.rol-visitante{
+  background-color: rgba(69, 255, 131, 0.40);
+  padding: 3px;
+  border-radius: 10px;
+}
+
+
+button:hover{
+  background-color: rgb(155, 60, 60);
+  color: white;}
 
 @media (min-width:576px) {
   body{
@@ -75,7 +218,6 @@ main{
   "main main"
   "footer footer";
   }
-
 
 
   .stats-boxes{
@@ -96,11 +238,31 @@ main{
     "footer footer";
   }
 
+  header{
+    z-index: 2;
+  }
+
+  input{
+    width: 400px;
+  }
+
   aside{
     display: fixed;
     height: 100vh;
-    z-index: -1;
-    width: auto;
+    z-index: 1;
+  }
+
+  .menu-button{
+    display:none;
+  }
+
+  .menu-lista{
+    display:block !important;
+  }
+
+  ul li{
+    text-align: left;
+    width: 180px;
   }
 
   main{

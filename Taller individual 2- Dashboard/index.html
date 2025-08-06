@@ -8,26 +8,33 @@
 </head>
 <body>
   <header>
-    <div>
-      logo
+    <div class="logo">
+      <p>♈ Jx</p>
     </div>
     <div>
       <input type="text" placeholder="Búsqueda" />
     </div>
-    <div>
-      <div>Notificación</div>
-      <div>Perfil</div>
+    <div class="noti-container">
+      <div class="noti">🔔</div>
+      <div class="user">Perfil</div>
     </div>
   </header>
   <aside>
-    <ul>
-      <li>Dashboard</li>
-      <li>Usuarios</li>
-      <li>Productos</li>
-      <li>Visitas</li>
-      <li>Reportes</li>
-      <li>Configuración</li>
-    </ul>
+    <div class="menu-button">
+        <ul>
+          <li>Menú</li>
+        </ul>
+    </div>
+    <div class="menu-lista">
+      <ul>
+        <li>Dashboard</li>
+        <li>Usuarios</li>
+        <li>Productos</li>
+        <li>Visitas</li>
+        <li>Reportes</li>
+        <li>Configuración</li>
+      </ul>
+    </div>    
   </aside>
   <main>
     <div class="stats-container">
@@ -36,48 +43,80 @@
       </div>
       <div class="stats-boxes">
         <div>
-          <p>123546</p>
+          <p class="stats-emoji">🧒</span>
+          <p class="stats-main-p">123546</p>
           <p>Usuarios Activos</p>
         </div>
         <div>
-          <p>564</p>
+          <p class="stats-emoji">📦</span>
+          <p class="stats-main-p">564</p>
           <p>Productos</p>
         </div>
         <div>
-          <p>$ 564</p>
+          <p class="stats-emoji">📈</span>
+          <p class="stats-main-p">$ 564</p>
           <p>Ventas del mes</p>
         </div>
         <div>
-          <p>89%</p>
+          <p class="stats-emoji">📊</span>
+          <p class="stats-main-p">89%</p>
           <p>Satisfacción</p>
         </div>
       </div>
     </div>
     <div class="users-table">
+      <div class="table-header">
+        <p>Usuarios Recientes</p>
+        <button>Agregar usuario</button>
+      </div>
       <table>
-        <tr>
-          <th>
-            <p>Usuarios Recientes</p>
-            <button>Agregar usuario</button>
-          </th>          
-        </tr>
-        <tr>
+        <tr class="table-encabezados">
           <th>ID</th><th>Nombre</th><th>Email</th><th>Rol</th><th>Estado</th><th>Fecha Registro</th><th>Acciones</th>
         </tr>
         <tr>
-          <td>0001</td><td>Ana García</td><td>ana.garcia@gmail.com</td><td>ADMIN</td><td>Activo</td><td>15/01/2024</td><td>Editar/eliminar</td>
+          <td>0001</td><td>María Torres</td><td>maria.torres@email.com</td>
+          <td><span class="rol-admin">ADMIN</span></td><td>Activo</td><td>10/03/2024</td><td class="edits">⚙️ 🧺</td>
         </tr>
         <tr>
-          <td>0002</td><td>Ana García</td><td>ana.garcia@gmail.com</td><td>ADMIN</td><td>Activo</td><td>15/01/2024</td><td>Editar/eliminar</td>
+          <td>0002</td><td>Julián Pérez</td><td>julianp89@gmail.com</td>
+          <td><span class="rol-user">USER</span></td><td>Inactivo</td><td>22/06/2024</td><td class="edits">⚙️ 🧺</td>
         </tr>
         <tr>
-          <td>0003</td><td>Ana García</td><td>ana.garcia@gmail.com</td><td>ADMIN</td><td>Activo</td><td>15/01/2024</td><td>Editar/eliminar</td>
+          <td>0003</td><td>Camila Díaz</td><td>cdiaz@correo.com</td>
+          <td><span class="rol-visitante">VISITANTE</span></td><td>Activo</td><td>07/01/2024</td><td class="edits">⚙️ 🧺</td>
         </tr>
         <tr>
-          <td>0004</td><td>Ana García</td><td>ana.garcia@gmail.com</td><td>ADMIN</td><td>Activo</td><td>15/01/2024</td><td>Editar/eliminar</td>
+          <td>0004</td><td>Esteban López</td><td>esteban.lopez@empresa.co</td>
+          <td><span class="rol-user">USER</span></td><td>Activo</td><td>19/02/2024</td><td class="edits">⚙️ 🧺</td>
+        </tr>
+        <tr>
+          <td>0005</td><td>Luisa Martínez</td><td>luisa.martinez@example.com</td>
+          <td><span class="rol-admin">ADMIN</span></td><td>Inactivo</td><td>01/05/2024</td><td class="edits">⚙️ 🧺</td>
+        </tr>
+        <tr>
+          <td>0006</td><td>Diego Ramírez</td><td>diego.r@correo.co</td>
+          <td><span class="rol-visitante">VISITANTE</span></td><td>Activo</td><td>11/04/2024</td><td class="edits">⚙️ 🧺</td>
         </tr>
       </table>
     </div>
   </main>
+  <script>
+      const menuButton = document.querySelector('.menu-button');
+      const menuLista = document.querySelector('.menu-lista');
+
+      menuButton.addEventListener('click', () => {
+        if (menuLista.style.display === 'none' || menuLista.style.display === '') {
+          menuLista.style.display = 'block';
+        } else {
+          menuLista.style.display = 'none';
+        }
+      });
+
+          menuLista.querySelectorAll('li').forEach(item => {
+        item.addEventListener('click', () => {
+          menuLista.style.display = 'none';
+        });
+      });
+  </script>
 </body>
 </html>
